@@ -22,8 +22,10 @@
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <img src="{{ asset('svg/instagram-logo.svg') }}" alt="Logo"
-                     style="max-height:18px">
-                    {{ config('app.name', 'Laravel') }}
+                    class="insta-logo pr-3">
+                    <span class="pl-1">
+                        {{ config('app.name', 'Laravel') }}
+                    </span>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
