@@ -9,7 +9,7 @@
         </div>
         <div class="col-sm-7 col-md-7 col-lg-7">
             <div>
-                <h1>FreeCodeCamp</h1>
+                <h1>{{ $user->username }}</h1>
             </div>
             <div class="d-flex">
                 <div class="mr-4"><strong>123</strong> posts</div>
