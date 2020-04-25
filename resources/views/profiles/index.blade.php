@@ -12,6 +12,9 @@
                 <h1>{{ $user->username }}</h1>
                 <a href="{{ route('p.create') }}">Add New Post</a>
             </div>
+
+            <a href="{{ route('profile.edit' , ['user' => $user->id]) }}">Edit Profile</a>
+
             <div class="d-flex">
                 <div class="mr-4"><strong>{{ $user->posts->count() }}</strong> posts</div>
                 <div class="mr-4"><strong>23k</strong> followers</div>
@@ -26,7 +29,9 @@
 
         @foreach ($user->posts as $post)
         <div class="col-4 mb-4">
-            <img src="{{ url('/storage/'.$post->image) }}" alt="" class="w-100">
+            <a href="{{ route('p.show',['post' => $post->id]) }}">
+                <img src="{{ url('/storage/'.$post->image) }}" alt="" class="w-100">
+            </a>
         </div>
         @endforeach
 
