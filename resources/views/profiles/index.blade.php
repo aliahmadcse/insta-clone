@@ -13,7 +13,7 @@
                 <a href="{{ route('p.create') }}">Add New Post</a>
             </div>
             <div class="d-flex">
-                <div class="mr-4"><strong>123</strong> posts</div>
+                <div class="mr-4"><strong>{{ $user->posts->count() }}</strong> posts</div>
                 <div class="mr-4"><strong>23k</strong> followers</div>
                 <div class="mr-4"><strong>212</strong> following</div>
             </div>
@@ -25,7 +25,7 @@
     <div class="row mt-4">
 
         @foreach ($user->posts as $post)
-        <div class="col-4 mb-2">
+        <div class="col-4 mb-4">
             <img src="{{ url('/storage/'.$post->image) }}" alt="" class="w-100">
         </div>
         @endforeach
