@@ -10,7 +10,7 @@
         <div class="col-sm-7 col-md-7 col-lg-7">
             <div class="d-flex justify-content-between align-items-baseline">
                 <h1>{{ $user->username }}</h1>
-                <a href="">Add New Post</a>
+                <a href="{{ route('p.create') }}">Add New Post</a>
             </div>
             <div class="d-flex">
                 <div class="mr-4"><strong>123</strong> posts</div>
@@ -23,30 +23,13 @@
         </div>
     </div>
     <div class="row mt-4">
+
+        @foreach ($user->posts as $post)
         <div class="col-4 mb-2">
-            <img src="https://instagram.flhe4-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/c0.110.927.927a/s640x640/94008464_699663694126442_3358825138011401542_n.jpg?_nc_ht=instagram.flhe4-1.fna.fbcdn.net&_nc_cat=102&_nc_ohc=sEkZYxocvk4AX8-wYZM&oh=0ce7dfa6eeed6ddf501d9b4d662f5889&oe=5ECD5335"
-                alt="" class="w-100">
+            <img src="{{ url('/storage/'.$post->image) }}" alt="" class="w-100">
         </div>
-        <div class="col-4 mb-4">
-            <img src="https://instagram.flhe4-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/c0.110.927.927a/s640x640/94008464_699663694126442_3358825138011401542_n.jpg?_nc_ht=instagram.flhe4-1.fna.fbcdn.net&_nc_cat=102&_nc_ohc=sEkZYxocvk4AX8-wYZM&oh=0ce7dfa6eeed6ddf501d9b4d662f5889&oe=5ECD5335"
-                alt="" class="w-100">
-        </div>
-        <div class="col-4 mb-4">
-            <img src="https://instagram.flhe4-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/c0.110.927.927a/s640x640/94008464_699663694126442_3358825138011401542_n.jpg?_nc_ht=instagram.flhe4-1.fna.fbcdn.net&_nc_cat=102&_nc_ohc=sEkZYxocvk4AX8-wYZM&oh=0ce7dfa6eeed6ddf501d9b4d662f5889&oe=5ECD5335"
-                alt="" class="w-100">
-        </div>
-        <div class="col-4 mb-4">
-            <img src="https://instagram.flhe4-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/c0.110.927.927a/s640x640/94008464_699663694126442_3358825138011401542_n.jpg?_nc_ht=instagram.flhe4-1.fna.fbcdn.net&_nc_cat=102&_nc_ohc=sEkZYxocvk4AX8-wYZM&oh=0ce7dfa6eeed6ddf501d9b4d662f5889&oe=5ECD5335"
-                alt="" class="w-100">
-        </div>
-        <div class="col-4 mb-4">
-            <img src="https://instagram.flhe4-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/c0.110.927.927a/s640x640/94008464_699663694126442_3358825138011401542_n.jpg?_nc_ht=instagram.flhe4-1.fna.fbcdn.net&_nc_cat=102&_nc_ohc=sEkZYxocvk4AX8-wYZM&oh=0ce7dfa6eeed6ddf501d9b4d662f5889&oe=5ECD5335"
-                alt="" class="w-100">
-        </div>
-        <div class="col-4 mb-4">
-            <img src="https://instagram.flhe4-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/c0.110.927.927a/s640x640/94008464_699663694126442_3358825138011401542_n.jpg?_nc_ht=instagram.flhe4-1.fna.fbcdn.net&_nc_cat=102&_nc_ohc=sEkZYxocvk4AX8-wYZM&oh=0ce7dfa6eeed6ddf501d9b4d662f5889&oe=5ECD5335"
-                alt="" class="w-100">
-        </div>
+        @endforeach
+
     </div>
 </div>
 @endsection

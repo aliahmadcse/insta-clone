@@ -15,9 +15,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Auth::routes();
 
+// show profile route
 Route::get('/profile/{user}', 'ProfilesController@index')
     ->name('profile.show');
 
-Route::get('/p','PostsController@create');
+// post routes
+
+Route::get('/p/create', 'PostsController@create')->name('p.create');
+
+Route::post('/p','PostsController@store')->name('p.store');
