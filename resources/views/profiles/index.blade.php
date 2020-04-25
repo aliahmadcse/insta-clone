@@ -8,8 +8,9 @@
                 alt="" class="rounded-circle" style="width:80px;height:80px">
         </div>
         <div class="col-sm-7 col-md-7 col-lg-7">
-            <div>
+            <div class="d-flex justify-content-between align-items-baseline">
                 <h1>{{ $user->username }}</h1>
+                <a href="">Add New Post</a>
             </div>
             <div class="d-flex">
                 <div class="mr-4"><strong>123</strong> posts</div>
