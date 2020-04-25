@@ -23,4 +23,9 @@ class ProfilesController extends Controller
     {
         return view('profiles.edit', compact('user'));
     }
+
+    public function update(Request $request, User $user)
+    {
+        
+    }
 }

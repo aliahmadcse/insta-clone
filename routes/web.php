@@ -25,6 +25,9 @@ Route::get('/profile/{user}', 'ProfilesController@index')
 Route::get('profile/{user}/edit', 'ProfilesController@edit')
     ->name('profile.edit');
 
+Route::patch('profile/{user}', 'ProfilesController@update')
+    ->name('profile.update');
+
 // post routes
 
 Route::get('/p/create', 'PostsController@create')->name('p.create');
