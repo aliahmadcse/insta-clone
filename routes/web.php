@@ -18,6 +18,11 @@ Route::get('/', function () {
 
 Auth::routes();
 
+// axios asynchrous request route
+Route::post('follow/{user}', function () {
+    return 'success';
+});
+
 // show profile route
 Route::get('/profile/{user}', 'ProfilesController@index')
     ->name('profile.show');
