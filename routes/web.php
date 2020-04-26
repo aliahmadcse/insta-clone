@@ -18,10 +18,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-// axios asynchrous request route
-Route::post('follow/{user}', function () {
-    return 'success';
-});
+// axios asynchrous request route for following
+Route::post('/follow', 'FollowsController@store');
 
 // show profile route
 Route::get('/profile/{user}', 'ProfilesController@index')
