@@ -53,7 +53,7 @@
                     <div class="custom-file">
                         <label class="custom-file-label" for="image">Profile Image...</label>
 
-                        <input type="file" class="custom-file-input" id="image" name="image" required>
+                        <input type="file" class="custom-file-input" id="image" name="image">
                         @error('image')
                         <div class="invalid-feedback">Example invalid custom file feedback</div>
                         @enderror
