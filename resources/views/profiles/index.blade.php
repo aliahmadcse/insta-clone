@@ -10,19 +10,25 @@
         <div class="col-sm-7 col-md-7 col-lg-7">
             <div class="d-flex justify-content-between align-items-baseline">
                 <h1>{{ $user->username }}</h1>
+
+                @can('update', $user->profile)
                 <a href="{{ route('p.create') }}">Add New Post</a>
+                @endcan
+
             </div>
 
+            @can('update', $user->profile)
             <a href="{{ route('profile.edit' , ['user' => $user->id]) }}">Edit Profile</a>
+            @endcan
 
             <div class="d-flex">
                 <div class="mr-4"><strong>{{ $user->posts->count() }}</strong> posts</div>
                 <div class="mr-4"><strong>23k</strong> followers</div>
                 <div class="mr-4"><strong>212</strong> following</div>
             </div>
-            <div class="mt-2 font-weight-bold">{{ $user->profile->title }}</div>
-            <div>{{ $user->profile->description }}</div>
-            <div><a href="#">{{ $user->profile->url }}</a></div>
+            <div class="mt-2 font-weight-bold">{{ $user->profile->title ?? '' }}</div>
+            <div>{{ $user->profile->description ?? '' }}</div>
+            <div><a href="#">{{ $user->profile->url ?? '' }}</a></div>
         </div>
     </div>
     <div class="row mt-4">
