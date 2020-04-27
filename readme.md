@@ -1,5 +1,7 @@
 # Instagram Clone
 
+![Hero Image](/public/svg/hero.png)
+
 ## Features
 - Create a Post
 - Visit profiles
