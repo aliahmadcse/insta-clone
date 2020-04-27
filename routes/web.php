@@ -11,9 +11,14 @@
 |
 */
 
-
+use App\Mail\NewUserWelcomeMail;
 
 Auth::routes();
+
+// test email route
+Route::get('email', function () {
+    return new NewUserWelcomeMail();
+});
 
 // axios asynchrous request route for following
 Route::post('/follow', 'FollowsController@store');
